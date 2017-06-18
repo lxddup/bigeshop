@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登陆 - 京东后台管理系统</title>
+    <link rel="stylesheet" href="css/admlogin.css"/>
+    <!--<link rel="stylesheet" href="css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="css/normalize.css"/>-->
+    <!--<script src="js/bootstrap.js"></script>-->
+    <!--<script src="js/npm.js"></script>-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <!--<script src="js/ow.admin.js"></script>-->
+    <!--<script src="js/ow.js"></script>-->
+    <script type="text/javascript">
+        var CTL = "login";
+        var ACT = "view";
+        var RUN_MODE = "0";
+        var SITE_PATH = "/";
+        Admin.debug = false;
+        OW.isClient = false;
+        OW.debug = false;
+        OW.runMode = 0;
+        OW.logined = false;
+//        OW.domain = "keyspacezone.com";
+        OW.sitePath = "/";
+//        OW.siteUrl = "http://keyspacezone.com/";
+//        OW.siteHurl = "http://keyspacezone.com/?";
+        OW.siteHtmlFileSuffix = ".html";
+//        OW.searchUrl = "http://keyspacezone.com/?ctl=search&is_shop={$is_shop}&keyword={$keyword}&page={$page}";
+//        OW.loginUrl = "http://keyspacezone.com/?login.html";
+//        OW.logoutUrl = "http://keyspacezone.com/?logout.html";
+//        OW.regUrl = "http://keyspacezone.com/?reg.html";
+        OW.moneySb = "￥";
+        OW.ctl = "login";
+        OW.rootpath = "";
+        OW.urlpath = "";
+        OW.cookie.cookiePre = "ow_";
+        OW.cookie.cookieDomain = "";
+        OW.cookie.cookiePath = "/";
+        OW.gid = "";
+        OW.pid = "";
+        OW.shoppingIsNeedLogin = "1";
+//        OW.cartUrl = "http://keyspacezone.com/?cart.html";
+    </script>
+    <style>
+        .verifycode a.fresh:hover {
+            background: #e6e6e6;
+            text-decoration: none;
+            color:#0070d9;
+        }
+
+        .verifycode a.fresh {
+            background: #fff;
+            border: 1px solid #666;
+            display: inline-block;
+            float: left;
+            height: 36px;
+            line-height: 36px;
+            padding: 0px 6px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #0070d9;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="login" style="height: 587px;">
+    <div class="login-form" style="margin-top: 89px; margin-left: 472.5px;">
+        <div class="header">管理员登陆</div>
+        <dl>
+            <dt>账号 username</dt>
+            <dd><input type="text" class="text username" name="username" value=""><span class="t-normal ml5"
+                                                                                        name="t_username"></span></dd>
+        </dl>
+        <dl>
+            <dt>登陆密码 password</dt>
+            <dd><input type="password" class="text password" name="password" value=""><span class="t-normal ml5"
+                                                                                            name="t_password"></span>
+            </dd>
+        </dl>
+        <dl>
+            <dt>验证码 verify code</dt>
+            <dd><input type="text" class="text verifycode" name="verifycode_value" maxlength="5" value=""><span
+                    class="verifycode" name="login_verifycode"></span><span class="t-normal ml5"
+                                                                            name="t_verifycode_value"></span></dd>
+        </dl>
+        <div class="buttons">
+            <a href="index-k.html"><button class="btn-login" id="login_button">立即登录 Login</button></a>
+        </div>
+        <div class="actions"><a class="forget-password" href="">忘记密码？</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">var Login = new Login_Class();
+$(document).ready(function () {
+    var $btn = $("#login_button");
+    Login.init();
+    OW.enterClick(function () {
+        $btn.click()
+    });
+    $btn.click(function () {
+        Login.logining()
+    });
+    $(".login").height(OW.webScreenHeight() - 40);
+    $(window).resize(function () {
+        $(".login").height(OW.webScreenHeight() - 40)
+    });
+});
+
+
+</script>
+</body>
+</html>

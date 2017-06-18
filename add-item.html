@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/add-item.css">
+
+
+    <style>
+
+        #mask_shadow {
+            display: none;
+            opacity: 0;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        #popup {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            z-index: 2;
+            top: 150px;
+            width: 600px;
+            height: 190px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        #popup .title {
+            position: relative;
+            width: 100%;
+            height: 55px;
+            background-color: #5bc0de;
+            cursor: move;
+        }
+        #popup .title p {
+            padding-left: 14px;
+            line-height: 55px;
+            color: #fff;
+        }
+        #popup .title span {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            color: #000;
+            opacity: .2;
+            font-size: 21px;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        #popup .title span:hover {
+            opacity: .8;
+        }
+        #popup .cont {
+            width: 100%; height: 135px; background-color: #EDEDED;}
+    </style>
+</head>
+<body>
+
+<div class="top">
+<span class="loc">
+    主站点
+    <em><<</em>
+    商品管理
+    <en><<</en>
+    添加商品
+</span>
+</div>
+<div class="nav-tabs">
+    <ul>
+        <li><a href="javascript:void 0;" class="a_hover">商品基础信息</a></li>
+        <li><a href="javascript:void 0;">商品详细信息</a></li>
+        <li><a href="javascript:void 0;">规格参数</a></li>
+    </ul>
+</div>
+<div class="clearfix"></div>
+<div class="wbox" style="display: block;">
+  <div class="inbox">
+      <table class="infoTable">
+          <tr>
+                  <td class="titletd top">所属栏目</td>
+                  <td class="infotd">
+                     <span class="main-cate-name">耳机/音响/配件</span>
+                  </td>
+              </tr>
+          <tr>
+          <td class="titletd top">
+              <i class="important">*</i>商品名称</td>
+          <td class="infotd">
+              <input type="text" class="text text-long left">
+              <span class="colorpicker">
+                  </span>
+              <span class="font_weight_set left" id="font_weight_set">B</span>
+              <span class="ex-cate-set">
+                          <a href="javascript:;" id="gaoji"> +副标题</a>
+                      </span>
+          </td>
+      </tr>
+          <tr id="second-title">
+              <td class="titletd top">
+                  商品副标题</td>
+              <td class="infotd">
+                  <input type="text" class="text text-long left" placeholder="请输入副标题">
+              </td>
+          </tr>
+          <tr>
+              <td class="titletd top">
+                  <i class="important">*</i>商品编号</td>
+              <td class="infotd">
+                  <input type="text" class="text text-good-sn left">
+
+              </td>
+          </tr>
+          <tr>
+              <td class="titletd top">
+                 价格</td>
+              <td class="infotd">
+                  <input type="text" class="text text-shock left">
+
+              </td>
+          </tr>
+          <tr>
+              <td class="titletd top">
+                  数量</td>
+              <td class="infotd">
+                  <input type="text" class="text text-shock left">
+
+              </td>
+          </tr>
+          <tr>
+              <td class="titletd top">
+                  <i class="important">*</i> 商品缩略图</td>
+              <td class="infotd">
+                  <div class="image-grid">
+                      <table border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                         <tr>
+                             <td class="imgleft" valign="top">
+                                   <div class="imgbox">
+                                       <img src="images/image.jpg" alt="">
+                                   </div>
+                             </td>
+                             <td class="imgright">
+                                 <button class="btn btn-sm select-img">选择图片...</button>
+                                 <button class="btn btn-sm">清除</button>
+                             </td>
+                         </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td class="titletd top">
+                  <i class="important">*</i> 商品图片</td>
+              <td class="infotd">
+                <div class="image-grid">
+                    <h5><button class="btn btn-sm select-img" id="tex-sel-img">选择图片</button></h5></div>
+              </td>
+          </tr>
+          <tr>
+              <td class="titletd top">
+                  商品描述</td>
+              <td class="infotd">
+                  <textarea class="textarea-summary" name="" maxlength="250"></textarea>
+
+              </td>
+          </tr>
+
+
+      </table>
+  </div>
+
+</div>
+<div class="clearfix"></div>
+<div class="btn-container">
+    <button type="submit" class="btn btn-lg btn-primary">
+    确定保存
+    </button>
+    <button type="reset" class="btn btn-lg">
+        重置
+    </button>
+    <button type="button" class="btn btn-lg">
+      关闭
+    </button>
+</div>
+<div class="wbox" style="width:100%;height:80%;">
+    <iframe src="umeditor1.2.3-utf8-jsp/index.html" frameborder="0" style="width:100%;height:100%"></iframe>
+</div>
+
+<div class="wbox" style="width: 60%;">
+    <div class="inbox">
+        <table class="infoTable">
+            <tbody>
+            <tr>
+                <td  class="titletd top" > 商品参数</td>
+                <td class="infotd">
+                    <select  name="" id="">
+                        <option value="">请选择</option>
+                        <option value="笔记本">笔记本</option>
+                        <option value="服装">服装</option>
+                    </select>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+</div>
+
+<div id="popup">
+    <div class="title">
+        <p data-title="选择图片"></p>
+        <span>x</span>
+    </div>
+    <div class="cont">
+        <input type="file">
+    </div>
+</div>
+<div id="mask_shadow"></div>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/add-item.js"></script>
+<script src="js/popup-lu.js"></script>
+<script>
+    $(function () {
+
+        /**
+         ifDrag: 是否拖拽
+         dragLimit: 拖拽限制范围
+         */
+        $('#popup').popup({ifDrag: true, dragLimit: true});
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/goods-management.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/popup.js"></script>
+
+    <!--<script src="js/bootstrap.min.js"></script>-->
+
+</head>
+<body>
+<div class="breadcrumb">
+    <div class="help-grid">
+        <a class="reload" href="javascript:;">刷新</a>
+    </div>
+      <span class="loc">
+        主站点<em>》</em>商品管理<em>》</em>商品列表<em>》</em>
+    </span>
+</div>
+<div class="mbody">
+    <div class="top-area">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+                <td class="do-cell">
+                    <div class="do-cell-name">
+                        添加操作区
+                    </div>
+                    <div class="do-cell-btn">
+                        <a class="btn btn-primary" id="btn1">添加商品</a>
+
+
+                    </div>
+                </td>
+                <td class="do-cell">
+                    <div class="do-cell-name">
+                        删除区操作
+                    </div>
+                    <div class="do-cell-btn">
+                        <a href="javascript:;" class="btn btn-default" id="delete_selected">批量删除</a>
+                    </div>
+                </td>
+                <td class="do-cell">
+                    <div class="do-cell-name">
+                        商品列表排序方式
+                    </div>
+                    <div class="do-cell-btn">
+                        <select name="order_by" id="">
+                            <option value="0">默认排序</option>
+                            <option value="1">按git从小->到大</option>
+                            <option value="2">按git从大->到小</option>
+                            <option value="3">按时间更新 从最新->旧</option>
+                            <option value="4">按时间更新 从旧->最新</option>
+                        </select>
+                    </div>
+                </td>
+                <td class="do-cell orderby">
+                    <div class="do-cell-name orderby">
+                        搜索操作区
+                    </div>
+                    <div class="do-cell-btn div-form">
+                        <form action="" class="search-form">
+                            <select name="status" id="statu">
+                                <option value="-1">状态</option>
+                                <option value="0">已下架</option>
+                                <option value="1">已上架</option>
+                            </select>
+                            <input type="text" class="text" name="keywords"/>
+                            <button class="btn">搜索</button>
+                        </form>
+                    </div>
+                </td>
+                <td class="do-cell">
+                    <div class="do-cell-name">
+                        导出操作区
+                    </div>
+                    <div class="do-cell-btn">
+                        <a href="" class="btn">批量导出Excel(xls)文件</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="list-area" id="data_list_ares">
+            <table border="0" cellpadding="0" cellspacing="0" class="list-Table" id="list-Table">
+                <thead>
+                <tr class="thead eline">
+                    <th style="width:1%;padding:0 5px 0 8px;">
+                        <input type="checkbox" id="seleted_all"/>
+                    </th>
+                    <th>iid</th>
+                    <th>商品</th>
+                    <th>库存</th>
+                    <th>售价</th>
+                    <th>浏览量</th>
+                    <th>评论量</th>
+                    <th>状态</th>
+                    <th>推荐</th>
+                    <th>排序</th>
+                    <th>所属栏目</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+            <tbody>
+            <tr class="data">
+                <td style="width:1%;padding:0 5px 0 8px;">
+                    <input type="checkbox" name="data-checkbox" class="checkbox"/>
+                </td>
+                <td>
+                    <a href="" value="11">11</a>
+                </td>
+                <td>
+                    <div class="ow-goods-item">
+                        <div class="thumb">
+                            <a href="">
+                                <img src="images/thumbnail%20(1).jpg" alt=""/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <a href="">小米平板2</a>
+                            </div>
+                            <div class="goods-sn">OWS0000110</div>
+                        </div>
+                    </div>
+
+                </td>
+                <td>100</td>
+                <td><em class="money-sb">￥</em>3999</td>
+                <td>1</td>
+                <td>1</td>
+                <td>
+                    <a class="status-0" href="javascript:;" value="0" title="点击可变为已下架商品">已上架</a>
+                    <!--<a class="status-1" href="javascript:;" value="0" title="点击可变为已上架商品">已下架</a>-->
+
+                </td>
+                <td>
+                    <a class="attr-value-1" href="javascript:;" value="1" title="点击取消推荐">是</a>
+                </td>
+                <td>
+                    <div class="list-order-cell">
+                        <a class="arrow-up" href=""></a>
+                        <a class="arrow-down" href=""></a>
+                        <input class="text list-order" type="text" value="12"/>
+                    </div>
+                </td>
+                <td>笔记本平板电脑</td>
+                <td class="td-operation">
+                    <a href="" class="btn btn-small btn-primary">编辑</a>
+                    <a href="" class="btn btn-small">移动</a>
+                    <br>
+                    <a href="" class="btn btn-small">咨询</a>
+                    <a href="" class="btn btn-small">评价</a>
+                    <a href="javascript:;" class="btn btn-small" name="delete">删除</a>
+                </td>
+            </tr>
+            <tr class="data">
+                <td style="width:1%;padding:0 5px 0 8px;">
+                    <input type="checkbox" name="data-checkbox" class="checkbox"/>
+                </td>
+                <td>
+                    <a href="" value="12">12</a>
+                </td>
+                <td>
+                    <div class="ow-goods-item">
+                        <div class="thumb">
+                            <a href="">
+                                <img src="images/thumbnail%20(2).jpg" alt=""/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <a href="">华为平板M3</a>
+                            </div>
+                            <div class="goods-sn">OWS0000130</div>
+                        </div>
+                    </div>
+
+                </td>
+                <td>100</td>
+                <td><em class="money-sb">￥</em>1788</td>
+                <td>1</td>
+                <td>1</td>
+                <td>
+                    <a class="status-0" href="javascript:;" value="0" title="点击可变为已下架商品">已上架</a>
+                    <!--<a class="status-1" href="javascript:;" value="0" title="点击可变为已上架商品">已下架</a>-->
+                </td>
+                <td>
+                    <a class="attr-value-1" href="javascript:;" value="1" title="点击取消推荐">是</a>
+                </td>
+                <td>
+                    <div class="list-order-cell">
+                        <a class="arrow-up" href=""></a>
+                        <a class="arrow-down" href=""></a>
+                        <input class="text list-order" type="text" value="12"/>
+                    </div>
+                </td>
+                <td>笔记本平板电脑</td>
+                <td class="td-operation">
+                    <a href="" class="btn btn-small btn-primary">编辑</a>
+                    <a href="" class="btn btn-small">移动</a>
+                    <br>
+                    <a href="" class="btn btn-small">咨询</a>
+                    <a href="" class="btn btn-small">评价</a>
+                    <a href="javascript:;" class="btn btn-small" name="delete">删除</a>
+                </td>
+            </tr>
+            <tr class="data">
+                <td style="width:1%;padding:0 5px 0 8px;">
+                    <input type="checkbox" name="data-checkbox" class="checkbox"/>
+                </td>
+                <td>
+                    <a href="" value="12">12</a>
+                </td>
+                <td>
+                    <div class="ow-goods-item">
+                        <div class="thumb">
+                            <a href="">
+                                <img src="images/thumbnail%20(2).jpg" alt=""/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <a href="">华为平板M3</a>
+                            </div>
+                            <div class="goods-sn">OWS0000130</div>
+                        </div>
+                    </div>
+
+                </td>
+                <td>100</td>
+                <td><em class="money-sb">￥</em>1788</td>
+                <td>1</td>
+                <td>1</td>
+                <td>
+                    <a class="status-0" href="javascript:;" value="0" title="点击可变为已下架商品">已上架</a>
+                    <!--<a class="status-1" href="javascript:;" value="0" title="点击可变为已上架商品">已下架</a>-->
+                </td>
+                <td>
+                    <a class="attr-value-1" href="javascript:;" value="1" title="点击取消推荐">是</a>
+                </td>
+                <td>
+                    <div class="list-order-cell">
+                        <a class="arrow-up" href=""></a>
+                        <a class="arrow-down" href=""></a>
+                        <input class="text list-order" type="text" value="12"/>
+                    </div>
+                </td>
+                <td>笔记本平板电脑</td>
+                <td class="td-operation">
+                    <a href="" class="btn btn-small btn-primary">编辑</a>
+                    <a href="" class="btn btn-small">移动</a>
+                    <br>
+                    <a href="" class="btn btn-small">咨询</a>
+                    <a href="" class="btn btn-small">评价</a>
+                    <a href="javascript:;" class="btn btn-small" name="delete">删除</a>
+                </td>
+            </tr>
+            <tr class="data">
+                <td style="width:1%;padding:0 5px 0 8px;">
+                    <input type="checkbox" name="data-checkbox" class="checkbox"/>
+                </td>
+                <td>
+                    <a href="" value="12">12</a>
+                </td>
+                <td>
+                    <div class="ow-goods-item">
+                        <div class="thumb">
+                            <a href="">
+                                <img src="images/thumbnail%20(2).jpg" alt=""/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <a href="">华为平板M3</a>
+                            </div>
+                            <div class="goods-sn">OWS0000130</div>
+                        </div>
+                    </div>
+
+                </td>
+                <td>100</td>
+                <td><em class="money-sb">￥</em>1788</td>
+                <td>1</td>
+                <td>1</td>
+                <td>
+                    <a class="status-0" href="javascript:;" value="0" title="点击可变为已下架商品">已上架</a>
+                    <!--<a class="status-1" href="javascript:;" value="0" title="点击可变为已上架商品">已下架</a>-->
+
+                </td>
+                <td>
+                    <a class="attr-value-1" href="javascript:;" value="1" title="点击取消推荐">是</a>
+                </td>
+                <td>
+                    <div class="list-order-cell">
+                        <a class="arrow-up" href=""></a>
+                        <a class="arrow-down" href=""></a>
+                        <input class="text list-order" type="text" value="12"/>
+                    </div>
+                </td>
+                <td>笔记本平板电脑</td>
+                <td class="td-operation">
+                    <a href="" class="btn btn-small btn-primary">编辑</a>
+                    <a href="" class="btn btn-small">移动</a>
+                    <br>
+                    <a href="" class="btn btn-small">咨询</a>
+                    <a href="" class="btn btn-small">评价</a>
+                    <a href="javascript:;" class="btn btn-small" name="delete">删除</a>
+                </td>
+            </tr>
+            <tr class="pages eline">
+                <td colspan="14">
+                    <div class="pages-style">
+                       <span class="unlink allpages">
+                                共0页
+                       </span>
+                        <span class="unlink records">
+                                     共0条记录
+                        </span>
+                        <span class="unlink perpage">0条/页</span>
+                        <a href="">10条/页</a>
+                        <a href="">20条/页</a>
+                        <span class="unlink" href="">50条/页</span>
+                        <a href="">100条/页</a>
+                        <a href="">200条/页</a>
+                        <a href="">500条/页</a>
+                        <a href="">1000条/页</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="popup">
+    <div class="title">
+        <p data-title="选择商品栏目"></p>
+        <span class="close-popup"></span>
+    </div>
+    <div class="cont">
+        <div class="add_to">
+            <div class="add_to_info">添加到</div>
+            <div class="category_setion">
+                <select name="category">
+                    <option value="">耳机/音响/配件</option>
+                    <option value="">智能硬件/移动电池/插线板</option>
+                    <option value="">保护套/贴膜</option>
+                    <option value="">线材/支架/存储卡</option>
+                </select>
+                <p>灰色的为不可选栏目</p>
+            </div>
+        </div>
+        <div class="dialog-buttons">
+            <!--确定按钮 还没加跳转什么的-->
+            <button class="btn btn-primary" id="sure">确定</button>
+            <button class="btn btn-close">取消</button>
+        </div>
+    </div>
+</div>
+<div id="mask_shadow"></div>
+<script src="js/goods-management.js"></script>
+<script>
+window.onload = function () {
+document.getElementById("sure").onclick = function () {
+window.parent.mainFrame.src="add-item.html";
+}
+}</script>
+</body>
+</html>

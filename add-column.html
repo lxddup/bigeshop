@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add-column</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/add-item.css">
+    <link rel="stylesheet" href="css/add-column.css">
+</head>
+<body>
+<div class="top">
+<span class="loc">
+    主站点
+    <em><<</em>
+    内容栏目
+    <en><<</en>
+    栏目管理
+</span>
+</div>
+
+
+<div class="clearfix"></div>
+<div class="wbox2">
+    <div class="inbox">
+        <table class="infoTable">
+            <tr>
+                <td class="titletd top">类型</td>
+                <td class="infotd">
+                    <input type="radio" name="type" value="内容栏目">内容栏目
+                    <input type="radio" name="type" value="文件夹">文件夹
+                    <span class="t-normal">文件夹本身是没有事迹内容的，仅作归类用，也不在前台栏目显示。</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="titletd top">上级栏目</td>
+                <td class="infotd">
+                    <select name="" id="">
+                        <option value="">=作为上级栏目=</option>
+                        <option value="公司简介">公司简介</option>
+                        <option value="新闻资讯">新闻资讯</option>
+                        <option value="案例展示">案例展示</option>
+                        <option value="下载中心">下载中心</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="titletd top">
+                    <i class="important">*</i>栏目名称</td>
+                <td class="infotd">
+                    <input type="text" class="text text-long left" placeholder="请输入栏目名称">
+
+                    <span class="ex-cate-set">
+                          <a href="javascript:;" id="gaoji"> +副名称</a>
+                      </span>
+                </td>
+            </tr>
+            <tr id="second-title">
+                <td class="titletd top">
+                    栏目副名</td>
+                <td class="infotd">
+                    <input type="text" class="text text-long left" placeholder="请输入栏目副名">
+                    <span class="t-normal">栏目副名可用作栏目英文名、副标题等用途，若不用可不必填写</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="titletd top">
+                    内容模型</td>
+               <td>
+                <select name="" id="content-type"style="margin-left:9px;">
+                    <option value="">选择内容模型</option>
+                    <option value="单页模型">单页模型</option>
+                    <option value="新闻模型">新闻模型</option>
+                    <option value="产品模型">产品模型</option>
+                    <option value="案例模型">案例模型</option>
+                    <option value="下载模型">下载模型</option>
+                    <option value="视频模型">视频模型</option>
+                    <option value="招聘模型">招聘模型</option>
+                    <option value="问答模型">问答模型</option>
+                </select>
+               </td>
+            </tr>
+            <tr>
+                <td class="titletd top">
+                    SEO标题</td>
+                <td class="infotd">
+                    <input type="text" class="text text-long left">
+                    <span class="t-normal">页面的标题</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="titletd top">
+                   SEO关键字</td>
+                <td class="infotd">
+                    <input type="text" class="text text-long left">
+                    <span class="t-normal">页面的meta标签关键字</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="titletd top">
+                    SEO描述</td>
+                <td class="infotd">
+                    <textarea class="textarea-summary"></textarea>
+                    <span class="t-normal">页面的meta标签关键字</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="btn-container">
+    <button type="submit" class="btn btn-lg btn-primary">
+        确定保存
+    </button>
+    <button type="reset" class="btn btn-lg">
+        重置
+    </button>
+    <button type="button" class="btn btn-lg">
+        关闭
+    </button>
+</div>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/add-column.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/goods-management.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/popup.js"></script>
+    <script type="text/javascript" src="js/jquery.date_input.pack.js"></script>
+
+</head>
+<body>
+
+<div class="breadcrumb">
+    <div class="help-grid">
+        <a class="reload" href="javascript:;">刷新</a>
+    </div>
+      <span class="loc">
+        主站点<em>》</em>商品管理<em>》</em>商品列表<em>》</em>
+    </span>
+</div>
+<div class="mbody">
+    <div class="top-area">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+                <td class="do-cell">
+                    <div class="do-cell-name">
+                        添加操作区
+                    </div>
+                    <div class="do-cell-btn">
+                        <a class="btn btn-primary" id="add_new">添加新订单</a>
+                    </div>
+                </td>
+                <td class="do-cell">
+                    <div class="do-cell-name">
+                        删除区操作
+                    </div>
+                    <div class="do-cell-btn">
+                        <a href="javascript:;" class="btn btn-default" id="delete_selected">批量删除</a>
+                    </div>
+                </td>
+                <td class="do-cell">
+                    <div class="do-cell-btn">
+                        <form action="" class="ow-search-form">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <dl class="item">
+                                            <dt>
+                                                起始日期
+                                                <a class="clear" href="javascript:;" id="clear_item_star">清除</a>
+                                            </dt>
+                                            <dd>
+                                                <input type="text" class="text text-datetime date_picker" id="data_star"/>
+                                            </dd>
+                                        </dl>
+                                    </td>
+                                    <td>
+                                        <dl class="item">
+                                            <dt>
+                                                截止日期
+                                                <a class="clear" href="javascript:;" id="clear_item_end">清除</a>
+                                            </dt>
+                                            <dd>
+                                                <input type="text" class="date_picker text text-datetime" id="data_end"/>
+                                            </dd>
+                                        </dl>
+                                    </td>
+                                    <td>
+                                        <dl class="item">
+                                            <dt>
+                                                搜索
+                                            </dt>
+                                            <dd>
+                                                <select name="category">
+                                                    <option value="">订单号</option>
+                                                    <option value="">订单标题</option>
+                                                    <option value="">订单id</option>
+                                                </select>
+                                            </dd>
+                                        </dl>
+                                    </td>
+                                    <td>
+                                        <dl class="item">
+                                            <dt>
+                                                关键词
+                                            </dt>
+                                            <dd>
+                                                <input type="text" class="text text-date-time"/>
+                                            </dd>
+                                        </dl>
+                                    </td>
+                                    <td>
+                                        <dl class="item">
+                                            <dt>
+                                            </dt>
+                                            <dd>
+                                                <button class="btn" type="submit">搜索</button>
+                                            </dd>
+                                        </dl>
+                                    </td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+
+                            <!--<input type="text" class="text" name="keywords"/>-->
+                            <!--<button class="btn">搜索</button>-->
+                        </form>
+                    </div>
+                </td>
+                <td class="do-cell">
+                    <div class="do-cell-name">
+                        导出操作区
+                    </div>
+                    <div class="do-cell-btn">
+                        <a href="" class="btn">批量导出Excel(xls)文件</a>
+                    </div>
+                </td>
+                <td class="do-cell">
+                    <div class="do-cell-name">
+                        发送消息
+                    </div>
+                    <div class="do-cell-btn">
+                        <a href="javascript:;" class="btn" id="test">群发用户消息</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="list-area" id="data_list_ares">
+        <table border="0" cellpadding="0" cellspacing="0" class="list-Table" id="list-Table">
+            <thead>
+            <tr class="thead eline">
+                <th style="width:1%;padding:0 5px 0 8px;">
+                    <input type="checkbox" id="seleted_all"/>
+                </th>
+                <th>oid</th>
+                <th>订单号</th>
+                <th>预</th>
+                <th>商品信息</th>
+                <th>确认</th>
+                <th>状态</th>
+                <th>商品总额</th>
+                <th>订单总额</th>
+                <th>会员</th>
+                <th>支付状态</th>
+                <th>配送状态</th>
+                <th>设备</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="14">
+                    <div style="padding:10px;">
+                        暂无数据...
+                    </div>
+                </td>
+
+            </tr>
+            <tr class="pages eline">
+                <td colspan="14">
+                    <div class="pages-style">
+                       <span class="unlink allpages">
+                                共0页
+                       </span>
+                        <span class="unlink records">
+                                     共0条记录
+                        </span>
+                        <span class="unlink perpage">0条/页</span>
+                        <a href="">10条/页</a>
+                        <a href="">20条/页</a>
+                        <span class="unlink" href="">50条/页</span>
+                        <a href="">100条/页</a>
+                        <a href="">200条/页</a>
+                        <a href="">500条/页</a>
+                        <a href="">1000条/页</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="js/goods-management.js"></script>
+<div id="popup" class="add_new_order">
+    <div class="title order_title">
+        <p data-title="添加新订单"></p>
+        <span class="close-popup"></span>
+    </div>
+    <div class="cont cont1">
+        <div class="add_to add_to1">
+            <div class="breadcrumb order_breadcrumb">
+                <div class="help-grid">
+                    <a class="reload" href="javascript:;">刷新</a>
+                </div>
+      <span class="loc">
+        主站点<em>》</em>商品管理<em>》</em>商品列表<em>》</em>
+    </span>
+            </div>
+            <div class="order_mbody">
+                <div class="w-box">
+                    <div class="inbox" id="order-info">
+                        <table border="0" cellpadding="0" cellspacing="0" class="infoTable">
+                            <tbody>
+                            <tr>
+                                <td class="titletd">
+                                    <i class="important">
+                                        *
+                                    </i>
+                                    订单所属用户
+                                </td>
+                                <td class="infotd">
+                                    <input type="text" class="text text-short readonly" name="username"/>
+                                    <button class="btn ml5">选择会员</button>
+                                    <span class="t-normal ml5"></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="titletd top">
+                                    订单商品
+                                </td>
+                                <td class="infotd">
+                                    <button class="btn">添加商品</button>
+                                    <span class="t-normal ml5"></span>
+
+                                    <div style="margin-top:8px;">
+                                        <table class="table table-bordered table-striped table-hover table-auto">
+                                            <thead>
+                                            <tr>
+                                                <th>商品</th>
+                                                <th>数量</th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="goods_list">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-buttons">
+        <!--下一步按钮 还没加跳转什么的-->
+        <button class="btn btn-primary">下一步</button>
+        <button class="btn btn-close">取消</button>
+    </div>
+</div>
+<div id="mask_shadow"></div>
+
+</body>
+</html>

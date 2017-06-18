@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<title>电商后台管理系统 </title>
+			<link rel="stylesheet" href="./css/index-k.css">
+			<link rel="stylesheet" href="./css/bootstrap.css">
+		</head>
+		<script type="text/javascript" src="./js/jquery-3.1.0.min.js">
+	</script>
+	
+		<body style="padding: 0px;height:100%; overflow-y:hidden">
+		
+			<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
+				<tbody>
+					<tr>
+						<td class="td-header" colspan="2">
+							<div class="header">
+								<div class="logo">
+									<a href="" title="网站预览" target="_blank"></a>
+								</div>
+								<div class="reflash">
+									<a href="javascript:;" onclick="javascript:void;">刷新</a>
+								</div>
+								<div class="top-admin" id="top-admin">
+									<div class="top-admin-item" id="top-admin-item">
+										<a href="javascript:;" class="taia"><span class="icon icon-admin-avatar"></span>XXX (创始人)<span class="caret"></span></a>
+									</div>
+									
+									<div class="top-admin-sub" id="top-admin-sub" style="display:none;">
+										<ul>
+											<li>
+												<a href="javascript:;" id="edit_password" target="mainFrame">
+													<span class="icon icon-password-change"></span>修改密码
+												</a>
+											</li>
+											<li class="help-0" style="display:none;">
+												<a href="javascript:;" id="openwbs_help" target="mainFrame">
+													<span class="icon icon-help"></span>使用帮助
+												</a>
+											</li>
+											<li>
+												<a href="" style="border-bottom-style: none;">
+													<span class="icon icon-logout"></span>安全退出系统</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="top-menu">
+									<ul class="menu">
+										<li class="m">
+											<a class="m destop link" href="javascript:;" target="mainFrame" id="destop">桌面</a>
+										</li>
+										<li class="m">
+											<a class="m" href="javascript:;" target="mainFrame">系统<em>管理</em><span class="caret"></span>
+											</a>
+											<div class="sub-wrapper">
+												<ul class="submenu">
+													<li><a class="s" href="" target="mainFrame"><span class="icon icon-tgr"></span>系统设置</a><div class="sub2-wrapper">
+												<ul>
+										<li>
+											<a href="" target="mainFrame">基本配置</a>
+										</li>
+										<li>
+											<a href="" target="mainFrame">运行模式/缓存设置</a>
+										</li>
+										<li>
+											<a href="" target="mainFrame">会员相关</a>
+										</li>
+										<li>
+											<a href="" target="mainFrame">安全相关</a>
+										</li>
+										<li>
+											<a href="" target="mainFrame">上传相关</a>
+										</li>
+										<li>
+											<a href="" target="mainFrame">商微账号接口</a>
+										</li>
+										<li>
+											<a href="" target="mainFrame">邮箱服务器设置</a>
+										</li>
+										<li>
+											<a href="" target="mainFrame">手机端配置</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<ul class="submenu">
+							<li>
+								<a class="s" href="" target="mainFrame">网站信息设置</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">网站导航管理</a>
+							</li>
+						</ul>
+						<ul class="submenu">
+							<li>
+								<a class="s" href="" target="mainFrame">上传文件管理</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">地区管理</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">邮件模板</a>
+							</li>
+						</ul>
+						<ul class="submenu">
+							<li>
+								<a class="s" href="" target="mainFrame">生成sitemap</a>
+							</li>
+						</ul>
+						<ul class="submenu">
+							<li>
+								<a class="s" href="" target="mainFrame">缓存管理</a>
+							</li>
+							<li style="display:none;">
+								<a class="s" href="" target="mainFrame">静态页面管理</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">网站模板管理</a>
+							</li>
+							<li style="display:none;">
+								<a class="s" href="" target="mainFrame">模版标签工具</a>
+							</li>
+						</ul>
+						<ul class="submenu">
+							<li>
+								<a class="s" href="" target="mainFrame">数据库备份</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">系统信息/检测</a>
+							</li>
+							<li>
+								<a class="s" href="javascript:;" name="update" target="mainFrame">在线升级</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="m">
+					<a class="m" href="javascript:;" target="mainFrame">微信<em>管理</em><span class="caret"></span></a>
+					<div class="sub-wrapper" style="display: none;">
+							<ul class="submenu">
+								<li><a class="s" href="" target="mainFrame">微信系统设置</a></li>
+							</ul>
+					</div>
+				</li>
+				<li class="m">
+					<a class="m" href="javascript:;" target="mainFrame">内容<em>管理</em><span class="caret"></span></a>
+					<div class="sub-wrapper" style="display: none;">
+						<ul class="submenu"><li><a class="s" href="" target="mainFrame">内容模型管理</a></li>
+							<li>
+								<a class="s" href="" onclick="" target="mainFrame">内容栏目管理</a>
+							</li>
+							<li>
+							    <a class="s" href="" target="mainFrame">内容类型管理</a>
+							</li>
+						</ul>
+						<ul class="submenu">
+							<li>
+								<a class="s" href="" target="mainFrame">内容推荐位</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">自定义标签</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">广告管理</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">评论管理</a>
+							</li>
+						</ul>
+						<ul class="submenu">
+							<li>
+								<a class="s cursor-default" href="javascript:;" target="mainFrame"><span class="icon icon-tgr"></span>表单管理</a>
+								<div class="sub2-wrapper">
+									<ul>
+										<li>
+											<a href="" target="mainFrame">自定义表单</a>
+										</li>
+										<li>
+											<a href="" target="mainFrame">在线留言</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<ul class="submenu">
+							<li><a class="s" href="" target="mainFrame">在线客服</a></li>
+							<li><a class="s" href="" target="mainFrame">友情链接</a></li>
+						</ul>
+						<ul class="submenu">
+							<li>	
+								<a class="s" href="" target="mainFrame">Tags管理</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">内链关键词管理</a>
+							</li>
+							<li>
+								<a class="s" href="" target="mainFrame">内容搜索关键词</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="m">	
+					<a class="m" href="javascript:;" target="mainFrame">商城<em>管理</em><span class="caret"></span></a>
+					<div class="sub-wrapper" style="display: none;">
+					<ul class="submenu">
+						<li>
+							<a class="s" href="" target="mainFrame">商城系统设置</a>
+						</li>
+						</ul>
+					<ul class="submenu">
+						<li>
+							<a class="s" href="" target="mainFrame">商品模型管理</a>
+						</li>
+						<li>	
+							<a class="s" href="" onclick="" target="mainFrame">商品栏目管理</a>
+						</li>
+						<li>
+							<a class="s" href="" target="mainFrame">商品类型管理</a>
+						</li>
+						<li>
+							<a class="s" href="" target="mainFrame">商品推荐位</a>
+						</li>
+					</ul>
+					<ul class="submenu">
+						<li>
+							<a class="s" href="" target="mainFrame">商品规格</a>
+						</li>
+						<li>	
+							<a class="s" href="" target="mainFrame">商品参数</a>
+						</li>
+					</ul>
+					<ul class="submenu">
+						<li>
+							<a class="s" href="" target="mainFrame">商品咨询</a>
+						</li>
+						<li>
+							<a class="s" href="" target="mainFrame">商品评价</a>
+						</li>
+					</ul>
+					<ul class="submenu">
+						<li>
+							<a class="s" href="" target="mainFrame">订单表单设置</a>
+						</li>
+					</ul>
+					<ul class="submenu">
+						<li>
+							<a class="s" href="" target="mainFrame">支付方式设置</a>
+						</li>
+						<li>
+							<a class="s" href="" target="mainFrame">物流配送模板设置</a>
+						</li>
+						<li>
+							<a class="s" href="" target="mainFrame">物流公司</a>
+						</li>
+					</ul>
+					<ul class="submenu">
+						<li>
+							<a class="s" href="" target="mainFrame">品牌管理</a>
+						</li>
+						<li>
+							<a class="s" href="" target="mainFrame">品牌分类</a>
+						</li>
+					</ul>
+					<ul class="submenu">
+						<li>
+							<a class="s" href="" target="mainFrame">商品Tags</a>
+						</li>
+						<li>	
+							<a class="s" href="" target="mainFrame">商品搜索关键词</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="m">
+				<a class="m" href="javascript:;" target="mainFrame">订单<em>管理</em><span class="caret"></span></a>
+				<div class="sub-wrapper" style="display: none;">
+					<ul class="submenu">
+						<li>
+							<a class="s" href="javascript:;" id="order-man"target="mainFrame"><span class="icon icon-tgr"></span>订单管理</a><div class="sub2-wrapper">
+							<ul>
+								<li>
+									<a href="" target="mainFrame">所有订单</a>
+								</li>
+								<li>
+									<a href="" target="mainFrame">预订订单</a>
+								</li>
+								<li>	
+									<a href="" target="mainFrame">待确认</a>
+								</li>
+								<li>	
+									<a href="" target="mainFrame">待付款</a>
+								</li>
+								<li>
+									<a href="" target="mainFrame">待发货</a>
+								</li>
+								<li>
+									<a href="" target="mainFrame">已发货待收货</a>
+								</li>
+								<li>	
+									<a href="" target="mainFrame">已取消</a>
+								</li>
+							</ul>
+							<ul>	
+								<li>
+									<a href="" target="mainFrame">订单回收站</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">收款单</a>
+					</li>
+					<li>
+						<a class="s" href="" target="mainFrame">退款单</a>
+					</li>
+					<li>
+						<a class="s" href="" target="mainFrame">发货单</a>
+					</li>
+					<li>
+						<a class="s" href="" target="mainFrame">退货单</a>
+					</li>
+				</ul>
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">支付交易记录</a>
+					</li>
+				</ul>
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">退款申请管理</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="m">
+			<a class="m" href="javascript:;" target="mainFrame">营销<em>管理</em><span class="caret"></span></a>
+			<div class="sub-wrapper" style="display: none;">
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">优惠券设置</a>
+					</li>
+					<li>
+						<a class="s" href="" target="mainFrame">优惠券列表</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="m">
+			<a class="m" href="javascript:;" target="mainFrame">统计<em>报表</em><span class="caret"></span></a>
+			<div class="sub-wrapper" style="display: none;">
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">报表总览</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="m">
+			<a class="m" href="javascript:;" target="mainFrame">用户<em>管理</em><span class="caret"></span></a>
+			<div class="sub-wrapper" style="display: none;">
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">会员列表</a>
+					</li>
+					<li>
+						<a class="s" href="" target="mainFrame">会员组</a>
+					</li>
+					<li>
+						<a class="s" href="" target="mainFrame">特殊会员组</a>
+					</li>
+				</ul>
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">管理员列表</a>
+					</li>
+					<li>
+						<a class="s" href="" target="mainFrame">管理员组</a>
+					</li>
+				</ul>
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">用户消息管理</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="m">
+			<a class="m" href="javascript:;" target="mainFrame">应用<em>插件</em><span class="caret"></span></a>
+			<div class="sub-wrapper" style="display: none;">
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">应用列表</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="m">
+			<a class="m" href="javascript:;" target="mainFrame">日志<span class="caret"></span></a>
+			<div class="sub-wrapper" style="display: none;">
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">短信记录日志</a>
+					</li>
+				</ul>
+				<ul class="submenu">
+					<li>
+						<a class="s" href="" target="mainFrame">系统操作日志</a>
+					</li>
+					<li>
+						<a class="s" href="" target="mainFrame">系统错误日志</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+	<div class="ow-website">
+		<a href="" target="_blank"><i></i>网站预览</a>
+	</div>
+ </div>
+ </div>
+</td>
+</tr>
+<tr style="position: absolute;top: 46px;">
+	<td valign="top">
+		<div id="leftpannel">	
+			<div id="left-menu" style="height: ;"  height="">
+				<div class="websites">
+					<h3><span id="site-name">主站点</span><a href="" class="view" target="_blank">预览</a></h3>
+					<div class="websites-sub" style="display:none;"></div></div>
+					<div class="wrapper">
+						<dl>	
+							<dt>
+								<div class="l-tabbar">
+									<ul>
+										<li class="tab1 " name="tab" tab="1"><a href="javascript:;">内容管理</a></li>
+										<li class="tab2 current " name="tab" tab="2"><a href="javascript:;">商品管理</a></li>
+									</ul>
+								</div>
+							</dt>
+							<dd id="tabs_container">
+								<div is_tab="true" tab="1" style="display: none;">
+									<ul class="left-menu">
+										<li class="m">
+											<a class="m m-folder" href="javascript:void(0)" target="mainFrame"><i></i>公司简介</a>
+											<div class="sub-menu sub-menu-1">
+												<div class="sub">
+													<a class="" href="" target="mainFrame">公司介绍</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">发展历程</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">管理团队</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">合作伙伴</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">公司环境</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">联系我们</a>
+												</div>
+											</div>
+										</li>
+										<li class="m">
+											<a class="m" href="" target="mainFrame"><i></i>新闻资讯</a>
+											<div class="sub-menu sub-menu-2">
+												<div class="sub">
+													<a class="" href="" target="mainFrame">公司动态</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">行业资讯</a>
+												</div>
+											</div>
+										</li>
+										<li class="m">
+											<a class="m" href="" target="mainFrame"><i></i>案例展示</a>
+											<div class="sub-menu sub-menu-3">
+												<div class="sub">
+													<a class="" href="" target="mainFrame">建材合作案例</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">保健产品案例</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">汽车配件案例</a>
+												</div>
+												<div class="sub">
+													<a class="" href=""	target="mainFrame">电子产品案例</a>
+												</div>
+											</div>
+										</li>
+										<li class="m">
+											<a class="m" href="" target="mainFrame"><i></i>下载中心</a>
+											<div class="sub-menu sub-menu-4">
+												<div class="sub">
+													<a class="" href="" target="mainFrame">常见文档</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">技术文档</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">招商文档</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">软件下载</a>
+												</div>
+											</div>
+										</li>
+										<li class="m">
+											<a class="m" href="" target="mainFrame"><i></i>视频中心</a>
+											<div class="sub-menu sub-menu-5">
+												<div class="sub">
+													<a class="" href="" target="mainFrame">媒体宣传</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">公司视频</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">产品视频</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">使用视频</a>
+												</div>
+											</div>
+										</li>
+										<li class="m">
+											<a class="m" href="" target="mainFrame"><i></i>人才招聘</a>
+											<div class="sub-menu sub-menu-6">
+												<div class="sub">
+													<a class="" href="" target="mainFrame">行政部</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">市场部</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">产品部</a>
+												</div>
+												<div class="sub">
+													<a class="" href="" target="mainFrame">销售部</a></div>
+												</div>
+											</li>
+											<li class="m">
+												<a class="m" href="" target="mainFrame"><i></i>常见问题</a>
+												<div class="sub-menu sub-menu-7">
+													<div class="sub">
+														<a class="" href="" target="mainFrame">售前问题</a>
+													</div>
+													<div class="sub">
+														<a class="" href="" target="mainFrame">售后问题</a>
+													</div>
+													<div class="sub">
+														<a class="" href="" target="mainFrame">技术问题</a>
+													</div>
+												</div>
+											</li>
+											<li class="m">
+												<a class="m m-folder" href="javascript:;" target="mainFrame"><i></i>其他单页</a>
+												<div class="sub-menu sub-menu-8">
+													<div class="sub">
+														<a class="" href="" target="mainFrame">用户协议</a>
+													</div>
+													<div class="sub">
+														<a class="" href="" target="mainFrame">隐私政策</a>
+													</div>
+												</div>
+											</li>
+											<li class="m m-cate-edit">
+												<a class="cate-edit" href="" onclick="" target="mainFrame"><i></i>内容栏目管理</a>
+											</li>
+										</ul>
+									</div>
+									<div class="shop-cate" is_tab="true" tab="2">
+										<ul class="left-menu">
+											<li class="m">
+												<a class="m" href="javascript:;" target="mainFrame" id="goods">所有商品列表</a>
+											</li>
+											<li class="m">
+												<a class="m" href="" target="mainFrame">笔记本平板</a>
+											</li>
+											<li class="m">
+												<a class="m" href="" target="mainFrame">耳机/音响/配件</a>
+											</li>
+											<li class="m">
+												<a class="m" href="" target="mainFrame">移动电源/电池/插线板</a>
+											</li>
+											<li class="m">
+												<a class="m" href="" target="mainFrame">保护套/贴膜</a>
+											</li>
+											<li class="m">
+												<a class="m" href="" target="mainFrame">线材/支架/存储卡</a>
+											</li>
+											<li class="m">
+												<a class="m" href="" target="mainFrame">箱包/服饰</a>
+											</li>
+											<li class="m">
+												<a class="m" href="" target="mainFrame">积分商城</a>
+											</li>
+											<li class="m m-cate-edit">
+												<a class="cate-edit" href="javascript:;"  id="good-column" target="mainFrame"><i class="ICON glyphicon glyphicon-th-list"></i>商品栏目管理</a>
+											</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td class="skinright" valign="top" width="100%">
+				<div id="mainFrameBox" style="overflow: hidden; height: 473px; width: 100%;"> 
+					<iframe src="index.html" name="mainFrame" id="mainFrame" class="mainFrame"
+							frameborder="0" style="margin: 0px; padding: 0px; height: 100%; width: 100%;"  hidefocus="">
+
+					</iframe>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+
+        var mainFrame = document.getElementById("mainFrame");
+	$(function(){
+        $("#goods").click(function(){
+            mainFrame.src = "goods-management.html";
+		})
+        $("#good-column").click(function(){
+            mainFrame.src = "columnlist.html";
+        })
+        $("#order-man").click(function(){
+            mainFrame.src = "order.html";
+        })
+		 $("#destop").click(function(){
+             mainFrame.src = "index.html";
+         })
+		function heightcontrl(){
+	
+	
+			var h=($(document).height())-45;
+			$('#left-menu').css('height',h);
+			$('#mainFrameBox').css('height',h);
+	
+	
+	
+	}
+		 $(window).resize(function(){
+			
+			heightcontrl();
+
+
+
+  }).ready(function(){
+  
+			heightcontrl();
+  
+  
+  });
+
+
+
+  $('.m').hover(function(){		$(this).children('.sub-wrapper').css('display','block');		},
+				function(){		$(this).children('.sub-wrapper').css('display','none');      }
+								)
+
+
+
+	$('.tab1').click(function(){
+	
+			$("div[tab='1']").css('display','block');
+			$("div[tab='2']").css('display','none');
+			
+			});
+
+
+			$('.tab2').click(function(){
+	
+			$("div[tab='2']").css('display','block');
+			$("div[tab='1']").css('display','none');
+			
+			});
+
+
+
+		$(".left-menu>.m").hover(function(){
+		$('.sub-menu').css('display','none');
+		$(this).children('.sub-menu').css('display','block');
+		
+		
+		
+		},function(){
+			$('.sub-menu').css('display','none');
+		
+		
+		})
+
+		$('#top-admin').hover(function(){
+		$('#top-admin-sub').css('display','block');
+		$('.taia').css('color','black');
+		
+		
+		
+		},function(){$('#top-admin-sub').css('display','none');
+		$('.taia').css('color','white');});
+
+
+    })
+
+
+	</script>
+
+		</body>
+	</html>
